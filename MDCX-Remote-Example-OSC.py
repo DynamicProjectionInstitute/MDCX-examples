@@ -12,7 +12,7 @@ import socket
 import time
 
 # CHANGE THIS TO THE MDC-X Server IP - make sure the OSC and MDC Proxy is enabled! 
-MDCX_HOST="192.168.0.200" #This is the DEFAULT MDC-X IP on the LAN Port
+MDCX_HOST="182.168.0.211" #This is the DEFAULT MDC-X IP on the LAN Port
 #MDCX_HOST="192.168.0.162"
 
 #####################################
