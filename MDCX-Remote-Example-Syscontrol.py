@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # Sample for remote control the MDC-X system
 #
 # This example uses the MDC-Daemon interface.
@@ -22,9 +23,9 @@ MDCX_DAEMON_PORT=9999
 def syssender(obj,topic):
 	try:
 		obj.sendto(topic,(MDCX_HOST,MDCX_DAEMON_PORT))
-		print "SYS LOG: TOPIC("+str(topic)+")"
+		print ("SYS LOG: TOPIC("+str(topic)+")")
 	except:
-		print "SYS ERROR - failed to send!"
+		print ("SYS ERROR - failed to send!")
 
 
 # UDP socket for the MDCX Daemon connection
@@ -62,15 +63,15 @@ SIMPLEKILL: This is equal to the TURN OFF button on MDC-Touch
 
 
 #Load AUTOMATIC  - configure in MDC-Touch SETUP
-print "Loading DEFAULT project...."
+print ("Loading DEFAULT project....")
 syssender(mdcx_system,"DLOAD  0")
 time.sleep(10)
-print "Loading DEFAULT automatic...."
+print ("Loading DEFAULT automatic....")
 syssender(mdcx_system,"DAULOAD  0")
 time.sleep(30)
-print "Stopping DEFAULT automatic and SHOW...."
+print ("Stopping DEFAULT automatic and SHOW....")
 syssender(mdcx_system,"KILL_MDC 0")
 syssender(mdcx_system,"KILL_AUTO 0")
-print "End of DEMONSTRATION"
+print ("End of DEMONSTRATION")
 
 

@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # Sample for remote control the MDC-X system
 #
 # This example uses the MDC-OSC interface.
@@ -23,12 +24,12 @@ def oscsender(obj,topic,msg):
 	try:
 		if msg is None:
 			obj.send(OSCMessage(topic))
-			print "OSC LOG: TOPIC("+str(topic)+")"
+			print ("OSC LOG: TOPIC("+str(topic)+")")
 		else:
 			obj.send(OSCMessage(topic,msg))
-			print "OSC LOG: TOPIC("+str(topic)+") MSG("+str(msg)+")"
+			print ("OSC LOG: TOPIC("+str(topic)+") MSG("+str(msg)+")")
 	except:
-		print "OSC ERROR - failed to send!"
+		print ("OSC ERROR - failed to send!")
 
 
 
